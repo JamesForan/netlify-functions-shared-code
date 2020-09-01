@@ -3,9 +3,10 @@ const utils = require('utils')
 exports.handler = (event, context, callback) => {
   try {
     console.log('hello-world started')
-    const message = {}
-    message.hello = utils.hello()
-    message.goodbye = utils.goodbye()
+    const message = {
+      hello: utils.hello(),
+      goodbye: utils.goodbye()
+    }
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
